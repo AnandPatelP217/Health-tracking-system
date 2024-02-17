@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Clicker+Script&family=Pacifico&family=Poppins:wght@200;300;400;500;600&family=Satisfy&family=Titillium+Web&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+
+:root {
+  --bg-black-900: #f2f2fc;
+  --bg-black-100: #fdf9ff;
+  --bg-black-50: #e8dfec;
+  --bg-black-25: #d9d0dd;
+  --text-black-900: #302e4d;
+  --text-black-700: #58567c;
+  --skin-color: #ec1839;
+  --col1: #ec1839;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+  font-family: "Poppins";
+}
+
+/* Edit Scrollbar */
+::-webkit-scrollbar {
+  height: 0;
+  width: 0.3rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--bg-black-100);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--text-black-700);
+  border-radius: 5rem;
+}
+
+.nav-link {
+  color: var(--text-black-900);
+}
+.margin-top-max{
+  margin-top: 6rem;
+}
+
+.mainhead1{
+  -webkit-text-stroke: 2px var(--skin-color);
+  color: transparent;
+  font-size: 2rem;
+  font-weight: bolder;
+  text-align: center;
+}
+
+
+/* Common classes */
+.my-btn {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 12px 30px;
+  color: white;
+  border-radius: 1.5rem;
+  display: inline-block;
+  white-space: nowrap;
+  border: none;
+  background: var(--skin-gradient);
+  transition: all 0.3s ease;
+}
+
+.my-btn:hover {
+  transform: scale(1.05);
+}
+
+.btn-style {
+  width: 6rem;
+  height: 3rem;
+  border-radius: 1.5rem;
+  color: #fff;
+  background-color: var(--skin-color);
+  text-transform: capitalize;
+  font-weight: 600;
+  margin-left: 0.3rem;
+  border: none;
+  transition: 0.1s ease-in;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-style:hover {
+  border: 0.1rem solid var(--skin-color);
+  background-color: transparent;
+  color: var(--skin-color);
+  box-shadow: 0 0.2rem 0.5rem rgba(236, 24, 57, 0.1);
+}
+.flexCenter {
+  display: flex;
+  row-gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.flexStart {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.flexEnd {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.flexColCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.flexColStart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.flexColEnd {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.primaryText {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.secondaryText {
+  color: var(--skin-color);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+
+/* ----- Common Classes Section ----- */
+
+.section-title {
+  flex: 0 0 100%;
+  max-width: 100%;
+  margin: 1.5rem 0 !important;
+}
+
+.section-title h2 {
+  font-size: 40px;
+  color: var(--text-black-900);
+  font-weight: 700;
+  position: relative;
+}
+
+.section-title h2::before {
+  content: "";
+  height: 4px;
+  width: 80px;
+  background-color: var(--skin-color);
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+.section-title h2::after {
+  content: "";
+  height: 4px;
+  width: 40px;
+  background-color: var(--skin-color);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 8px;
+}
+
+.text-section {
+  margin: 2rem 0 !important;
+}
+
+.heading-text {
+  font-size: 24px;
+  margin: 1.5rem 0;
+  font-weight: 700;
+  color: var(--text-black-900);
+}
+
+.my-para {
+  font-size: 16px;
+  line-height: 25px;
+  color: var(--text-black-700);
+  margin: 1.5rem 0;
+  text-align: justify;
+}
+
+.shadow-dark {
+  box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+}
+
+.pad-15 {
+  padding-left: 15px;
+  padding-right: 15px;
+}

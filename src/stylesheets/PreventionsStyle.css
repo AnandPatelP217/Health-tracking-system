@@ -1,0 +1,85 @@
+
+/* ----- How To Use The App Section ----- */
+.common-section {
+  margin: 5rem 0;
+}
+
+.sub-heading {
+  font-size: 1.25rem;
+}
+
+.paragraph{
+  font-size: 1rem;
+}
+
+.our-services img {
+  width: 70%;
+  height: 80%;
+  margin-top: 7rem;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 0.8rem 0.8rem;
+  border: 1px solid var(--bg-black-50);
+  border-radius: 1.5rem;
+}
+
+.common-section .btn-style {
+  width: 7.5rem;
+  height: 3rem;
+  border-radius: 1.5rem;
+  color: var(--skin-color);
+  background-color: transparent;
+  text-transform: capitalize;
+  font-weight: 600;
+  border: 0.1rem solid var(--skin-color);
+  transition: 0.25s linear;
+}
+
+.common-section .btn-style:hover {
+  background-color: var(--skin-color);
+  color: white;
+  box-shadow: 0 0.2rem 0.5rem rgba(236, 24, 57, 0.2);
+}
+
+.our-services .main-heading {
+  font-weight: bolder;
+  font-size: 32px;
+  text-transform: capitalize;
+  margin: 3.5rem 0;
+}
+
+.our-services-info {
+  margin-top: 1rem;
+}
+
+.our-services .our-services-number {
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  margin: 0;
+  border-radius: 100%;
+  background-color: transparent;
+  border: 0.1rem solid var(--skin-color);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--skin-color);
+  display: grid;
+  place-items: center;
+}
+
+.our-services-data {
+  padding-left: 2rem;
+  /* margin: 2.5rem 1rem; */
+}
+
+.our-services .our-services-data p {
+  margin: 0.5rem 0;
+}
+
+/* ----- World Class Support Section ----- */
+.our-services-right-side {
+  margin-top: 7.5rem;
+}
+
+.our-services-right-side-content,
+.our-services-list {
+  padding-left: 3rem !important;
+}

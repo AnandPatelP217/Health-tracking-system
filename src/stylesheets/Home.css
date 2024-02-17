@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  background: white;
+}
+.smallcontainer2 img {
+  width: 40%;
+  float: right;
+  padding-right: 30px;
+  padding-top: 60px;
+  background: white;
+}
+.smallcontainer1 {
+  width: 100%;
+  height: 606px;
+  margin: 0px;
+  /* padding-top: 250px; */
+  border-radius: 20px;
+}
+.smallcontainer1 h1 {
+  color: #ec1839;
+  font-size: 50px;
+  padding-top: 0px;
+  text-align: left;
+  margin: 2rem;
+  padding-bottom: 40px;
+}
+
+.smallcontainer1 h3 {
+  font-size: 35px;
+  padding-top: 0px;
+  text-align: left;
+  margin: 2rem;
+}
+.smallcontainer1 p {
+  text-align: left;
+  margin: 2rem;
+}
+.smallcontainer1 button {
+  text-align: left;
+  margin: 2rem;
+  font-size: 18px;
+  background-color: #ec1839;
+  border-radius: 8px;
+  border: 0px;
+  color: white;
+  padding: 15px 20px;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+.smallcontainer1 button:hover {
+  transform: scale(1.05);
+}
+.marked {
+  padding-top: 75px;
+  background-color: #0073c4;
+}
+.job {
+  margin-top: 42px;
+  background-color: #0073c4;
+  padding-top: 50px;
+  height: auto;
+  padding-bottom: 50px;
+}
+.jobsmallbox {
+  margin: 10px;
+  background-color: #ec1839;
+}
+.text1 {
+  padding-left: 7rem;
+}
+.jobsmallbox1 {
+  display: flexbox;
+  background-color: rgb(255, 166, 0);
+  float: right;
+}
+
+.header2image img {
+  float: right;
+  border-radius: 50%;
+  border: 5px;
+  padding-right: 30px;
+  padding-top: 60px;
+}
+
+.header2box {
+  padding: 70px;
+  max-width: 840px;
+}
+.header2box h1 {
+  font-size: 60px;
+  color: rgb(126, 103, 18);
+}
+.header2box h2 {
+  font-size: 25px;
+}

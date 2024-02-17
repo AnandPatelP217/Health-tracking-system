@@ -1,0 +1,150 @@
+/* Navbar */
+nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 10px 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 0px solid var(--bg-black-50);
+  z-index: 10;
+  background: var(--bg-black-100);
+  transition: all 0.3s ease-in;
+}
+
+.fixed-effect {
+  box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.3);
+}
+
+nav div, img {
+  background-color: var(--bg-black-100);
+}
+
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-black-100);
+}
+
+#navbar li {
+  list-style: none;
+  padding: 0 20px;
+  position: relative;
+  background-color: var(--bg-black-100);
+}
+
+#navbar li a {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-black-700);
+  background-color: var(--bg-black-100);
+  transition: 0.3s ease-in-out;
+  font-family: "Poppins";
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+  color: var(--skin-color);
+  text-shadow: 0 0.2rem 0.3rem rgba(236, 24, 57, 0.1);
+}
+
+#navbar li a.active::after {
+  content: "";
+  width: 30%;
+  height: 2px;
+  background: var(--skin-color);
+  position: absolute;
+  bottom: -3px;
+  left: 20px;
+}
+
+#mobile {
+  display: none;
+}
+
+#mobile i {
+  color: var(--text-black-700);
+}
+
+
+.btn-style{
+    width: 6rem;
+    height: 3rem;
+    border-radius: 1.5rem;
+    color: #fff;
+    background-color: var(--skin-color);
+    text-transform: capitalize;
+    font-weight: 600;
+    margin-left: 0.3rem;
+    border: none;
+    transition: 0.1s ease-in;
+}
+
+.btn-style:hover{
+    border: 0.1rem solid var(--skin-color);
+    background-color: transparent;
+    color: var(--skin-color);
+    box-shadow: 0 0.2rem 0.5rem rgba(236, 24, 57, 0.1);
+}
+
+.close-btn {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 889px) {
+  #navbar li {
+    padding: 0px 15px;
+  }
+
+  #navbar li a:hover::after,
+  #navbar li a.active::after {
+    left: 10px;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  #navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -301px;
+    width: 300px;
+    height: 100%;
+    background-color: var(--bg-black-100);
+    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.02);
+    padding: 40px 0 0 10px;
+    transition: 0.3s ease-in-out;
+    border-left: 1px solid var(--bg-black-50);
+    padding-top: 8rem;
+    padding-left: 1rem;
+    z-index: 100;
+  }
+
+  #navbar.active {
+    right: 0px;
+  }
+
+  #navbar li {
+    margin-bottom: 25px;
+  }
+
+  #mobile {
+    display: block;
+  }
+
+  #mobile i {
+    font-size: 24px;
+    cursor: pointer;
+  }
+}

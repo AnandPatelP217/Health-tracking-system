@@ -1,0 +1,124 @@
+/* .swiper-slide {
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    border: 1px solid #e6e6e6;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+}
+
+
+.swiper-slide .swiper-slide-content{
+    background-color: rgba(0, 0, 0, 0.385);
+    color: white;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.swiper-slide .swiper-slide-content h2{
+    font-size: 1.5rem;
+    font-weight: 900;
+    text-align: center;
+}
+
+.swiper-slide .swiper-slide-content  p{
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+} */
+
+.theme-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.theme-head {
+  margin-bottom: 2rem;
+}
+
+.glimpse-card {
+  gap: 0.6rem;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 10px;
+  max-width: max-content;
+  height: 250px;
+  background-color: transparent;
+  margin: 1rem auto;
+  transition: all 500ms ease-in;
+  position: relative;
+}
+
+.glimpse-card:hover {
+  scale: 1.025;
+  box-shadow: 0px 0px 0px 0px rgba(122, 251, 142, 0.21);
+}
+.glimpse .glimpse-card > img {
+  width: 100%;
+  height: 200px;
+  border: 2px solid var(--text-black-25);
+  border-radius: 20px;
+  transition: all 500ms ease-in;
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.15);
+  opacity: 0.65;
+  cursor: pointer;
+}
+
+.swiper-horizontal {
+  overflow: visible !important;
+}
+
+.slider-button {
+  position: absolute;
+  gap: 1rem;
+  top: -4rem;
+  right: 0;
+}
+
+.slider-button button {
+  font-size: 1.4rem;
+  font-weight: 500;
+  padding: 0.2rem 0.8rem;
+  color: var(--skin-color);
+  margin: 1rem;
+  border: 1px solid var(--bg-black-50);
+  border-radius: 5px;
+  background-color: var(--bg-black-100);
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+.exercise {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.exercise .exercise-name {
+  -webkit-text-stroke: 2px var(--text-black-900);
+  color: white;
+  font-size: 2rem;
+  font-weight: bolder;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.exercise .time {
+  color: var(--text-black-900);
+  font-size: 1.15rem;
+  font-weight: 500;
+}
