@@ -9,8 +9,8 @@ const Home = () => {
           <img src="./images/yoga.jpg" alt="yoga" />
         </div>
         <div className="smallcontainer1">
-          <h1> HEALTH AND WELNESS </h1>
-          <h3>Empowering Your Fitness Journey, One Rep at a Time!</h3>
+          <h1> Care Self </h1>
+          <h3>Building Nation Healthier</h3>
           <p>
             "Speed and direction in fitness are like the compass and velocity of
             your journey towards your goals. They guide your movements, helping

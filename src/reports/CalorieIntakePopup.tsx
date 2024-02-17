@@ -50,13 +50,13 @@ const CalorieIntakePopup: React.FC<CaloriIntakePopupProps> = ({
           id="outlined-basic"
           label="Food item name"
           variant="outlined"
-          color="warning"
+          style={{ color: "#302e4d" }}
         />
         <TextField
           id="outlined-basic"
           label="Food item amount (in gms)"
           variant="outlined"
-          color="warning"
+          style={{ color: "#302e4d" }}
         />
         {/* <div className="timebox">
           <LocalizationProvider dateAdapter={AdapterDayjs}>
@@ -66,8 +66,8 @@ const CalorieIntakePopup: React.FC<CaloriIntakePopupProps> = ({
             />
           </LocalizationProvider>
         </div> */}
-        <Button variant="contained" color="warning">
-          Save
+        <Button variant="contained" style={{ background: "#ec1839", color: "white" }}>
+          Update
         </Button>
         <div className="hrline"></div>
         <div className="items">

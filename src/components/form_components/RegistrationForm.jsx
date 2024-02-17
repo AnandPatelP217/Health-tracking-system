@@ -358,10 +358,7 @@ const RegistrationForm = () => {
                   <button type="button" onClick={prevStep}>
                     &#9998; Edit
                   </button>
-                  <button
-                    type="button"
-                    onClick={openDashboard}
-                  >
+                  <button type="button" onClick={openDashboard}>
                     Submit &#65515;
                   </button>
                 </div>
@@ -387,6 +384,12 @@ const RegistrationForm = () => {
             </button>
           </div>
         </form>
+
+        <div>
+          <p className="login-text">
+            Already have an Account ? <a href="/login">Sign In</a>
+          </p>
+        </div>
       </div>
     </section>
   );
