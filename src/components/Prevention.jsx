@@ -57,7 +57,7 @@ const Prevention = () => {
                 suggestion
                   .filter((disease) => disease.disease_name === "Cancer")
                   .map((disease) =>
-                    disease.suggested_foods.map((food, index) => {
+                    disease.avoiding_foods.map((food, index) => {
                       return (
                         <>
                           <div className="row our-services-info" key={index}>
@@ -101,7 +101,7 @@ const Prevention = () => {
                 suggestion
                   .filter((disease) => disease.disease_name === "Cancer")
                   .map((disease) =>
-                    disease.suggested_foods.map((food, index) => {
+                    disease.dailyExercise.map((exercise, index) => {
                       return (
                         <>
                           <div className="row our-services-info" key={index}>
@@ -109,8 +109,8 @@ const Prevention = () => {
                               {index + 1}
                             </div>
                             <div className="col-10 our-services-data">
-                              <h2 className="sub-heading">{food.foodName}</h2>
-                              <p className="paragraph">{food.about}</p>
+                              <h2 className="sub-heading">{exercise.exerciseName}</h2>
+                              <p className="paragraph">{exercise.about}</p>
                             </div>
                           </div>
                         </>

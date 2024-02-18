@@ -124,7 +124,12 @@ const HomeBanner2 = () => {
                           window.location.href = `/workout/${item.type}`;
                         }}
                       />
-                      <div className="exercise">
+                      <div
+                        className="exercise"
+                        onClick={() => {
+                          window.location.href = `/workout/${item.type}`;
+                        }}
+                      >
                         <span className="exercise-name">{item.type}</span>
                         <span className="time">{item.durationInMin} Min</span>
                       </div>

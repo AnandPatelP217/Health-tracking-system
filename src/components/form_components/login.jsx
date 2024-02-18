@@ -1,7 +1,8 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "../../stylesheets/ContactUsStyle.css";
 import Lottie from "lottie-react";
-import ContactSupport from "../../animations/contact_us.json";
+import LoginAnimation from "../../animations/loginAnimation.json";
 import { isNotEmpty, validateEmail, messageHasLength } from "../../utils/utils";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -10,6 +11,12 @@ import { API_URL } from "../../store/apiurl";
 const URL = `${API_URL}/api/form/contact`;
 
 const Login = () => {
+    const navigate = useNavigate();
+
+  const loginSuccess = () => {
+    navigate("/dashboard/home");
+    toast.success("Login Successfully!");
+  }
   const [login, setContact] = useState({
     email: "",
     password: "",
@@ -85,7 +92,9 @@ const Login = () => {
     <>
       <section className="contact-us-section" style={{ marginTop: "10rem" }}>
         <div className="container">
-          <h1 className="main-heading fw-bold">Login</h1>
+          <h1 className="main-heading fw-bold" style={{ marginLeft: "8rem" }}>
+            Login
+          </h1>
 
           {/* Contact Form */}
           <div className="row">
@@ -96,7 +105,7 @@ const Login = () => {
                   <figure>
                     <Lottie
                       loop={true}
-                      animationData={ContactSupport}
+                      animationData={LoginAnimation}
                       className="lottie-animation"
                     />
                   </figure>
@@ -144,13 +153,25 @@ const Login = () => {
                       </div>
                     </div>
 
-                    <button
-                      type="submit"
-                      className="my-btn w-100"
-                      disabled={isLoading}
-                    >
-                      {isLoading ? "Loading..." : "Login"}
-                    </button>
+                    <div className="row">
+                      <button
+                        type="submit"
+                        className="btn-style w-100"
+                        disabled={isLoading}
+                        onClick={loginSuccess}
+                      >
+                        Login
+                      </button>
+                    </div>
+
+                    <div className="row" style={{marginTop: '2rem'}}>
+                      <div>
+                        <p className="login-text">
+                          Don't have an Account ?{" "}
+                          <a href="/register">Sign Up</a>
+                        </p>
+                      </div>
+                    </div>
                   </form>
                 </div>
               </div>

@@ -1,0 +1,46 @@
+.diet{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card{
+  border: 1.5px solid var(--bg-black-25);
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  margin: 2rem 1rem;
+  min-width: 250px;
+  transition: 0.35s all ease;
+}
+
+.card:hover{
+  transform: scale(1.025);
+}
+
+.card img{
+  border-radius: 20px 20px 0 0;
+}
+
+.diet-card{
+  margin: 1rem;
+}
+
+.card-body{
+  background: var(--bg-black-900);
+  border-radius: 0 0 20px 20px;
+  padding: 1.5rem 1rem;
+}
+
+.card-title {
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--skin-color);
+  text-transform: uppercase;
+}
+
+.card-text{
+  color: var(--text-black-700);
+  font-size: 1rem;
+  text-align: center;
+}

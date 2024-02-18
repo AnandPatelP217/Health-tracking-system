@@ -1,5 +1,4 @@
 .workout {
-    font-family: Arial, sans-serif;
     margin: 20px;
     padding: 20px;
     border: 1px solid #ddd;
@@ -12,6 +11,14 @@
     flex-direction: column;
     justify-content: center;
     margin-top: 20px;
+    gap: 20px;
+}
+
+.exercise-heading{
+    font-weight: bold;
+    font-size: 3rem;
+    color: var(--text-black-900);
+    text-transform: uppercase;
 }
 
 .workout__exercise {
@@ -19,6 +26,7 @@
     align-items: center;
     margin-top: 30px;
     width: 100%;
+    justify-content: space-between;
 }
 
 .workout__exercise--reverse {
@@ -27,17 +35,16 @@
 
 
 .workout__exercise__image img {
-    max-width: 100%;
     height: auto;
-    min-width: 300px;
+    width: 350px;
 }
 
 .workout__exercise__content {
     display: flex;
     flex-direction: column;
     text-align: left;
-    gap: 10px;
     margin-left: 20px;
+    gap: 15px;
 }
 
 
@@ -58,7 +65,7 @@
     font-size: 20px;
     font-weight: 300;
     color: #ffffff;
-    background-color: var(--col1);
+    background-color: var(--skin-color);
     padding: 5px 20px;
     border-radius: 35px;
     width: fit-content;
@@ -67,17 +74,17 @@
 .workout__exercise__content p {
     font-size: 20px;
     font-weight: 300;
-    color: var(--col1);
+    color: var(--text-black-700);
 }
 
 .workout__exercises h3{
-    -webkit-text-stroke: 1px var(--col1);
+    -webkit-text-stroke: 1.5px var(--skin-color);
     color: transparent;
-    font-size: 10rem;
-    font-weight: 900;
+    font-size: 5rem;
+    font-weight: bold;
     text-align: center;
-    border: 1px solid var(--col1);
-    width: 15rem;
+    border: none;
+    width: 10rem;
     aspect-ratio: 1/1;
     border-radius: 50%;
 }

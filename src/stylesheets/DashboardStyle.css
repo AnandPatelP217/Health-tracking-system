@@ -1,0 +1,26 @@
+.nav-link{
+    transition: 0.3s all ease;
+    color: var(--text-black-700);
+    margin: 0.3rem auto;
+}
+.nav-link:hover{
+    background: var(--bg-black-900);
+    color: var(--text-black-900);
+    transform: scale(1.05);
+}
+.nav-link.active{
+    background: var(--skin-color) !important;
+}
+
+.sidebar{
+    width: 280px;
+    background: var(--bg-black-700) !important;
+    border-right: 1.5px solid var(--bg-black-25);
+    height: 100% !important;
+    overflow: scroll;
+}
+
+/* Dashboard Layout */
+.dashboard-layout{
+    background: white;
+}

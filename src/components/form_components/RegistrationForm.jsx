@@ -24,13 +24,14 @@ const RegistrationForm = () => {
     email: "",
     dob: "",
 
+
     // Step-2 Fields (Team Members Details)
     weight: "",
     height: "",
     // date: "",
     // goal: "",
-    anyDisease: "",
-    anyDiseaseInFamily: "",
+    disease: "",
+    familyDisease: "",
   });
 
   //for handling the form fields
@@ -45,9 +46,11 @@ const RegistrationForm = () => {
   };
 
   const openDashboard = () => {
-    selectedDisease === "None" && selectedDiseaseInFamily === "None"
+    data.disease === "" || data.disease === "None"
       ? (window.location.href = "/dashboard/home")
-      : (window.location.href = "/prevention");
+      : data.familyDisease === "" || data.familyDisease === "None"
+      ? (window.location.href = "/prevention")
+      : (window.location.href = "/dashboard/home");
   };
 
   // const openPrevention = () => {
@@ -257,30 +260,124 @@ const RegistrationForm = () => {
                 </div>
               </div>
 
+              <div>
+                <h5 className="disease">Have you any disease?</h5>
+              </div>
               <div class="form-box">
                 <div class="form-group">
-                  <Dropdown
-                    selected={selectedDisease}
-                    setSelected={setSelectedDisease}
-                    options={anyDisease}
-                    color={
-                      selectedDisease === "Select Disease"
-                        ? "#cac1ce"
-                        : "var(--text-black-700)"
-                    }
+                  <input
+                    value="Diabetes"
+                    type="checkbox"
+                    className="my-checkbox"
+                    name="disease"
                   />
+                  <span
+                    style={{
+                      color: "var(--text-black-700)",
+                      paddingLeft: "0.75rem",
+                    }}
+                  >
+                    Diabetes
+                  </span>
                 </div>
                 <div class="form-group">
-                  <Dropdown
-                    selected={selectedDiseaseInFamily}
-                    setSelected={setSelectedDiseaseInFamily}
-                    options={anyDiseaseInFamily}
-                    color={
-                      selectedDiseaseInFamily === "Select Family Disease"
-                        ? "#cac1ce"
-                        : "var(--text-black-700)"
-                    }
+                  <input
+                    value="Cancer"
+                    type="checkbox"
+                    className="my-checkbox"
+                    name="familyDisease"
                   />
+                  <span
+                    style={{
+                      color: "var(--text-black-700)",
+                      paddingLeft: "0.75rem",
+                    }}
+                  >
+                    Cancer
+                  </span>
+                </div>
+                <div class="form-group">
+                  <input value="One" type="checkbox" className="my-checkbox" />
+                  <span
+                    style={{
+                      color: "var(--text-black-700)",
+                      paddingLeft: "0.75rem",
+                    }}
+                  >
+                    Heart disease
+                  </span>
+                </div>
+                <div class="form-group">
+                  <input value="One" type="checkbox" className="my-checkbox" />
+                  <span
+                    style={{
+                      color: "var(--text-black-700)",
+                      paddingLeft: "0.75rem",
+                    }}
+                  >
+                    None
+                  </span>
+                </div>
+              </div>
+
+              <div>
+                <h5 className="disease">
+                  Have any disease to your family member?
+                </h5>
+              </div>
+              <div class="form-box">
+                <div class="form-group">
+                  <input
+                    value="Diabetes"
+                    type="checkbox"
+                    className="my-checkbox"
+                  />
+                  <span
+                    style={{
+                      color: "var(--text-black-700)",
+                      paddingLeft: "0.75rem",
+                    }}
+                  >
+                    Diabetes
+                  </span>
+                </div>
+                <div class="form-group">
+                  <input
+                    value="Cancer"
+                    type="checkbox"
+                    className="my-checkbox"
+                  />
+                  <span
+                    style={{
+                      color: "var(--text-black-700)",
+                      paddingLeft: "0.75rem",
+                    }}
+                  >
+                    Cancer
+                  </span>
+                </div>
+                <div class="form-group">
+                  <input value="One" type="checkbox" className="my-checkbox" />
+                  <span
+                    style={{
+                      color: "var(--text-black-700)",
+                      paddingLeft: "0.75rem",
+                    }}
+                  >
+                    Heart disease
+                  </span>
+                </div>
+                <div class="form-group">
+                  <input value="One" type="checkbox" className="my-checkbox" />
+                  <span
+                    style={{
+                      color: "var(--text-black-700)",
+                      paddingLeft: "0.75rem",
+                    }}
+                  >
+                    {" "}
+                    None{" "}
+                  </span>
                 </div>
               </div>
 
@@ -341,7 +438,7 @@ const RegistrationForm = () => {
                 </div>
               </div>
 
-              <div className="review-box">
+              {/* <div className="review-box">
                 <div className="form-group data">
                   <span className="data-heading">Disease</span>
                   <span className="data-value">{selectedDisease}</span>
@@ -351,7 +448,7 @@ const RegistrationForm = () => {
                   <span className="data-heading">Family Member Disease</span>
                   <span className="data-value">{selectedDiseaseInFamily}</span>
                 </div>
-              </div>
+              </div> */}
 
               <div className="form-box">
                 <div className="btn-step">

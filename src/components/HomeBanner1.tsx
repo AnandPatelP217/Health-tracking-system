@@ -2,6 +2,7 @@ import React from 'react'
 import CircularProgress from '@mui/joy/CircularProgress';
 import { AiOutlineEye } from 'react-icons/ai'
 import '../stylesheets/HomeBanner1.css';
+import CalorieIntakePopup from '../reports/CalorieIntakePopup.tsx';
 
 
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
@@ -26,55 +27,61 @@ const SliderButtons = () => {
 };
 
 const HomeBanner1 = () => {
-
+  const [showCalorieIntakePopup, setShowCalorieIntakePopup] = React.useState<boolean>(false);
 
   const [data, setData] = React.useState<any>(null)
 
   const getData = async () => {
     let temp = [
       {
-        "name": "Calories Intake",
-        "value": 2000,
-        "unit": "kcal",
-        "goal": 2500,
-        "goalUnit": "kcal"
+        name: "Calories Intake",
+        value: 2000,
+        unit: "kcal",
+        goal: 2500,
+        goalUnit: "kcal",
+        lastUpdate: "17 Feb 24 05:30 PM",
       },
       {
-        "name": "Sleep",
-        "value": 8,
-        "unit": "hrs",
-        "goal": 8,
-        "goalUnit": "hrs"
+        name: "Sleep",
+        value: 8,
+        unit: "hrs",
+        goal: 8,
+        goalUnit: "hrs",
+        lastUpdate: "17 Feb 24 05:32 PM",
       },
       {
-        "name": "Steps",
-        "value": 50,
-        "unit": "steps",
-        "goal": 10000,
-        "goalUnit": "steps"
+        name: "Steps",
+        value: 50,
+        unit: "steps",
+        goal: 10000,
+        goalUnit: "steps",
+        lastUpdate: "17 Feb 24 04:42 PM",
       },
       {
-        "name": "Water",
-        "value": 2000,
-        "unit": "ml",
-        "goal": 3000,
-        "goalUnit": "ml"
+        name: "Water",
+        value: 2000,
+        unit: "ml",
+        goal: 3000,
+        goalUnit: "ml",
+        lastUpdate: "17 Feb 24 06:30 PM",
       },
       {
-        "name": "Weight",
-        "value": 75,
-        "unit": "kg",
-        "goal": 70,
-        "goalUnit": "kg"
+        name: "Weight",
+        value: 75,
+        unit: "kg",
+        goal: 70,
+        goalUnit: "kg",
+        lastUpdate: "17 Feb 24 05:58 PM",
       },
       {
-        "name": "Workout",
-        "value": 2,
-        "unit": "days",
-        "goal": 6,
-        "goalUnit": "days"
-      }
-    ]
+        name: "Workout",
+        value: 2,
+        unit: "days",
+        goal: 6,
+        goalUnit: "days",
+        lastUpdate: "17 Feb 24 04:22 PM",
+      },
+    ];
     setData(temp)
     console.log(temp)
   }
@@ -106,9 +113,6 @@ const HomeBanner1 = () => {
           <Swiper
             slidesPerView={1}
             spaceBetween={50}
-            pagination={{
-              clickable: true,
-            }}
             breakpoints={{
               576: {
                 slidesPerView: 1,
@@ -134,6 +138,16 @@ const HomeBanner1 = () => {
                     return (
                       <SwiperSlide key={index}>
                         <div className="card" key={index}>
+                          {/* Add Icon */}
+                          <div className="icon-right">
+                            <i
+                              className="fa-solid fa-plus"
+                              onClick={() => {
+                                setShowCalorieIntakePopup(true);
+                              }}
+                            ></i>
+                          </div>
+
                           <div className="card-header">
                             <div className="card-header-box">
                               <div className="card-header-box-name">
@@ -178,6 +192,10 @@ const HomeBanner1 = () => {
                           >
                             Show Report <AiOutlineEye />
                           </button>
+
+                          <div className="last-update-time">
+                            <span>Last Updated - {item.lastUpdate}</span>
+                          </div>
                         </div>
                       </SwiperSlide>
                     );
@@ -185,6 +203,12 @@ const HomeBanner1 = () => {
               </div>
             }
           </Swiper>
+
+          {showCalorieIntakePopup && (
+            <CalorieIntakePopup
+              setShowCalorieIntakePopup={setShowCalorieIntakePopup}
+            />
+          )}
         </div>
       </section>
     </>

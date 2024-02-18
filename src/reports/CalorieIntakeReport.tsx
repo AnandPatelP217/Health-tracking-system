@@ -91,6 +91,19 @@ const CalorieIntakeReport = () => {
     });
   };
 
+  //dummy values
+  const uData = [2500, 2500, 2500, 2500, 2500, 2500, 2500];
+  const pData = [2400, 1398, 4000, 3500, 2000, 2800, 4300];
+  const xLabels = [
+    "10 Feb",
+    "11 Feb",
+    "12 Feb",
+    "13 Feb",
+    "14 Feb",
+    "15 Feb",
+    "16 Feb",
+  ];
+
   React.useEffect(() => {
     getDataForS1();
   }, []);
@@ -100,32 +113,25 @@ const CalorieIntakeReport = () => {
 
   return (
     <>
-    <Navbar />
       <section>
         <div className="reportpage margin-top-max">
           <div className="s1">
+            <h4>Diet Calories</h4>
             {dataS1 && (
               <LineChart
-                xAxis={[
-                  {
-                    id: "Day",
-                    data: dataS1.xAxis.data,
-                    scaleType: dataS1.xAxis.scaleType,
-                    label: dataS1.xAxis.label,
-                  },
-                ]}
+                width={500}
+                height={300}
                 series={[
-                  {
-                    data: dataS1.data,
-                    label: dataS1.title,
-                    color: dataS1.color,
-                  },
+                  { data: pData, label: "achieved" },
+                  { data: uData, label: "target" },
                 ]}
-                {...chartsParams}
+                xAxis={[{ scaleType: "point", data: xLabels }]}
               />
             )}
           </div>
           <div className="s2">
+            <h4>Exercise Calories</h4>
+
             {dataS1 && (
               <LineChart
                 xAxis={[
@@ -137,17 +143,13 @@ const CalorieIntakeReport = () => {
                   },
                 ]}
                 series={[
-                  {
-                    data: dataS1.data,
-                    label: dataS1.title,
-                    color: dataS1.color,
-                  },
+                  { data: pData, label: "achieved" },
+                  { data: uData, label: "target" },
                 ]}
                 {...chartsParams}
               />
             )}
           </div>
-
           <div className="s3">
             {dataS1 && (
               <LineChart

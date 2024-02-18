@@ -21,7 +21,7 @@ class Navbar extends Component {
       <>
         <nav>
           <NavLink to="/">
-            <img src="./images/logo.png" alt="DocApoint" width={100} />
+            <img src="/images/logo.png" alt="DocApoint" width={100} />
           </NavLink>
 
           <div>
