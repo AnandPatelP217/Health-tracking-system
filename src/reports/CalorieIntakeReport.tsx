@@ -4,6 +4,7 @@ import "../stylesheets/ReportStyle.css";
 import { AiFillEdit } from "react-icons/ai";
 import CalorieIntakePopup from "./CalorieIntakePopup.tsx";
 import Navbar from "../components/Navbar.jsx";
+import { useNavigate } from "react-router-dom";
 
 const CalorieIntakeReport = () => {
   const color = "#ec1839";
@@ -104,6 +105,30 @@ const CalorieIntakeReport = () => {
     "16 Feb",
   ];
 
+  const uData1 = [8, 8, 8, 8, 8, 8, 8];
+  const pData1 = [6, 8, 6, 3, 10, 8, 5];
+  const xLabels1 = [
+    "10 Feb",
+    "11 Feb",
+    "12 Feb",
+    "13 Feb",
+    "14 Feb",
+    "15 Feb",
+    "16 Feb",
+  ];
+
+  const uData2 = [2500, 2500, 2500, 2500, 2500, 2500, 2500];
+  const pData2 = [2400, 1398, 4000, 3500, 2000, 2800, 4300];
+  const xLabels2 = [
+    "10 Feb",
+    "11 Feb",
+    "12 Feb",
+    "13 Feb",
+    "14 Feb",
+    "15 Feb",
+    "16 Feb",
+  ];
+
   React.useEffect(() => {
     getDataForS1();
   }, []);
@@ -111,9 +136,28 @@ const CalorieIntakeReport = () => {
   const [showCalorieIntakePopup, setShowCalorieIntakePopup] =
     React.useState<boolean>(false);
 
+  const navigate = useNavigate();
+
+  const openDashboard = () => {
+    navigate("/dashboard/home");
+  };
+
   return (
     <>
       <section>
+        <div style={{ display: "flex", flexDirection: "row", margin: "1rem" }}>
+          <button className="my-btn" onClick={openDashboard}>
+            Go To Dashboard
+          </button>
+          <button
+            className="my-btn"
+            onClick={() => {
+              window.print();
+            }}
+          >
+            Download Report
+          </button>
+        </div>
         <div className="reportpage margin-top-max">
           <div className="s1">
             <h4>Diet Calories</h4>
@@ -150,7 +194,9 @@ const CalorieIntakeReport = () => {
               />
             )}
           </div>
-          <div className="s3">
+          <div className="s2" style={{ margin: "2rem" }}>
+            <h4>Sleep Cycle</h4>
+
             {dataS1 && (
               <LineChart
                 xAxis={[
@@ -162,18 +208,15 @@ const CalorieIntakeReport = () => {
                   },
                 ]}
                 series={[
-                  {
-                    data: dataS1.data,
-                    label: dataS1.title,
-                    color: dataS1.color,
-                  },
+                  { data: pData1, label: "achieved" },
+                  { data: uData1, label: "target" },
                 ]}
                 {...chartsParams}
               />
             )}
           </div>
 
-          <div className="s4">
+          {/* <div className="s4">
             {dataS1 && (
               <LineChart
                 xAxis={[
@@ -194,7 +237,7 @@ const CalorieIntakeReport = () => {
                 {...chartsParams}
               />
             )}
-          </div>
+          </div> */}
           <button
             className="editbutton"
             onClick={() => {

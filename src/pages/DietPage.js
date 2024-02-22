@@ -7,7 +7,7 @@ const DietPage = () => {
   return (
     <>
       <Navbar />
-      <Diet title={"Breakfast"} body={"Likh do kuchh bhi !"} imageUrl={"/images/exercise.jpg"}/>
+      <Diet title={"Breakfast"} body={"meals for breakfast"} imageUrl={"/images/exercise.jpg"}/>
       <Footer />
 
       

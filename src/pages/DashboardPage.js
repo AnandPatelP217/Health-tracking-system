@@ -6,7 +6,7 @@ const DashboardPage = () => {
   return (
     <>
       <HomeBanner1 />
-      <Buttons />
+      {/* <Buttons /> */}
     </>
   );
 };

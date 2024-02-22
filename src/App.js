@@ -32,6 +32,7 @@ import { DashboardLayout } from "./components/dashboard_components/DashboardLayo
 import DashboardPage from "./pages/DashboardPage.js";
 import SetRoutine from "./pages/dashboard/SetRoutine.js";
 import RecommendedExercisePage from "./pages/dashboard/RecommendedExercisePage.js";
+import RecommendedDiet from "./pages/dashboard/RecommendedDiet.js";
 
 
 function App() {
@@ -73,6 +74,7 @@ function App() {
         <Route path="/dashboard" element={<DashboardLayout />}>
           <Route path="home" element={<DashboardPage />} />
           <Route path="exercise" element={<RecommendedExercisePage />} />
+          <Route path="diet" element={<RecommendedDiet />} />
           {/* <Route path="diet" element={<Diet />} /> */}
           <Route path="routine" element={<SetRoutine />} />
         </Route>
